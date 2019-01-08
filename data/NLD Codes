@@ -197,9 +197,6 @@ summary(silc.rph$id_h.x)
 # diff <- nrow(silc.r) - nrow(silc.p)
 summary(is.na(silc.rph))
 
-# 150 obs. in rb050 (cross-secional weight) is NA. rm observations
-silc.rph <- silc.rph %>% filter(is.na(rb050))
-
 # now only Persons not in p but in r (age<16) are NA's. so its fine to set 0
 
 silc.rph[is.na(silc.rph)] <- 0
